@@ -9,7 +9,13 @@
 <body>
     <h1>Captura de votos</h1><br>
     <?php
-        
+        $f = fopen("votos.txt", "a");
+        $name = $_REQUEST['name'];
+        $vote = $_REQUEST['vote'];
+        fwrite($f, "$name $vote\n");
+        fclose($f);
+
+        echo "<p>Su voto ha sido registrado!</p>"
     ?>
 </body>
 </html>
