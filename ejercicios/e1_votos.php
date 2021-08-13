@@ -12,7 +12,7 @@
         $f = fopen("votos.txt", "a");
         $name = $_REQUEST['name'];
         $vote = $_REQUEST['vote'];
-        fwrite($f, "$name $vote\n");
+        fwrite($f, "\n$name $vote");
         fclose($f);
 
         echo "<p>Su voto ha sido registrado!</p>"
