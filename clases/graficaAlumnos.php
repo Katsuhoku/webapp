@@ -16,7 +16,6 @@
 
         $f = fopen("alumnos.txt", "r");
         while (!feof($fp)) {
-            //$linea = fgets($fp);
             fscanf($fp, "%s %f %d", $nombre, $promedio, $edad);
             $dataset->addPoint(new Point($nombre, $promedio));
         }
@@ -25,6 +24,7 @@
         $chart->setDataset($dataset);
         $chart->getplot()->setGraphPadding(new Padding(5, 30, 20, 140));
         $chart->setTitle("Promedios de los Alumnos");
+        $chart->render("generated/demo1.png");
     ?>
 </body>
 </html>
