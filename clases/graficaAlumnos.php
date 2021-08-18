@@ -26,5 +26,8 @@
         $chart->setTitle("Promedios de los Alumnos");
         $chart->render("generated/demo1.png");
     ?>
+
+    <br>
+    <img src="generated/demo1.png" alt="Grafica Alumnos">
 </body>
 </html>
