@@ -11,18 +11,18 @@
     <?php
         include "libchart/classes/libchart.php";
 
-        $chart = new HorizontalBarChart(600, 170);
-        $dataset = new XDataset();
+        $chart = new HorizontalBarChart(600, 270);
+        $dataset = new XYDataSet();
 
-        $f = fopen("alumnos.txt", "r");
+        $fp = fopen("alumnos.txt", "r");
         while (!feof($fp)) {
             fscanf($fp, "%s %f %d", $nombre, $promedio, $edad);
             $dataset->addPoint(new Point($nombre, $promedio));
         }
-        fclose($f);
+        fclose($fp);
 
         $chart->setDataset($dataset);
-        $chart->getPlot()->setGraphPadding(new Padding(5, 30, 20, 140));
+        $chart->getPlot()->setGraphPadding(new Padding(5, 30, 20, 240));
         $chart->setTitle("Promedios de los Alumnos");
         $chart->render("generated/demo1.png");
     ?>
