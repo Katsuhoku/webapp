@@ -35,7 +35,7 @@
             echo "<td>$titulo</td>";
             echo "<td>$director</td>";
             echo "<td>$actor</td>";
-            echo "<td><img src='../misimagenes/$imagen'</td>";
+            echo "<td><img src='../misimagenes/$imagen' width='80px' height='80px'></td>";
             echo "</tr>";
         }
 
