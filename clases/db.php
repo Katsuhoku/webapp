@@ -15,6 +15,7 @@
             SELECT * FROM PELICULA
         ");
 
+        echo "<a href='ranking.php'>Ranking de Películas</a>";
         echo "<table border='1'>";
         echo "<tr>";
         echo "<td>ID</td>";
