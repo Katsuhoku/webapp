@@ -11,6 +11,8 @@
     <?php
         include "libchart/classes/libchart.php";
 
+        error_reporting(0);
+
         $chart = new VerticalBarChart(600, 400);
 
         $votos = array(

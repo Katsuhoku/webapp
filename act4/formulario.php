@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Captura de Votos</h1><hr>
+    <a href="grafica.php">Ver gráfica de votos actuales</a>
     <form action="votos.php" method="POST">
         <?php
             echo "<span>Nombre del votante:<span>";
