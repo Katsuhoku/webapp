@@ -1,6 +1,6 @@
 drop database concesionaria;
 
-create database if not exists concesionaria;
+create database concesionaria;
 use concesionaria;
 
 create table if not exists vendedores_raw (
@@ -45,11 +45,11 @@ insert into vendedores_raw(nombre_vendedor) values
 
 insert into automoviles (marca, modelo, precio_neto, foto, id_vendedor) values
 ("Toyota","Prius",500000, "img1.jpg", null),
-("Volkswagen","Polo",300000, "img2.jpg", 3),
+("Volkswagen","Polo",300000, "img2.jpg", null),
 ("Mazda","3",800000, "img3.jpg", null),
-("Audi","TT",780000, "img4.jpg", 4),
-("Audi","TT RS",1400000, "img5.jpg", 4),
-("Volkswagen","Jetta 2021",900000, "img6.jpg", 2),
+("Audi","TT",780000, "img4.jpg", null),
+("Audi","TT RS",1400000, "img5.jpg", null),
+("Volkswagen","Jetta 2021",900000, "img6.jpg", null),
 ("Volkswagen","Polo",350000, "img7.jpg", null),
 ("Mazda","Roadster",859000, "img8.jpg", null),
 ("Mazda","CX-3",1280000, "img9.jpg", null);

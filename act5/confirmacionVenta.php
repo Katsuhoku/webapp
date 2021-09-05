@@ -67,7 +67,7 @@
 
         if ($link->query($query)) {
             echo "<p><b>¡Venta Exitosa!</b></p>";
-            echo "<A href='generarFactura.php'><img src='./static/logopdf.png' width='80' height='80'> </A><br><br>"; 
+            echo "<a href='generarFactura.php?automovil=$id_automovil'><img src='./static/logopdf.png' width='80' height='80'> </a><br><br>"; 
             echo "<a href='formularioVenta.php'>Vender otro vehículo</a>";
         } else {
             echo "<p><b>Ocurrió un error al registrar la venta. Intente nuevamente más tarde.</b></p><br>";
