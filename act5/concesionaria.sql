@@ -36,12 +36,12 @@ select * from automoviles
 where id_vendedor is not null;
 
 insert into vendedores_raw(nombre_vendedor) values
-("Alejando Martínez"),
+("Alejando Martinez"),
 ("Sandra Rojas"),
 ("Andrea Aguilar"),
 ("Arturo Meza"),
-("Mónica Galino"),
-("Josué Tellez");
+("Monica Galino"),
+("Josue Tellez");
 
 insert into automoviles (marca, modelo, precio_neto, foto, id_vendedor) values
 ("Toyota","Prius",500000, "img1.jpg", null),
