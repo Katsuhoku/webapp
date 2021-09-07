@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <title>Confirmacion Venta</title>
     <style>
+        *{
+            font-family: 'Poppins';
+        }
+        
         td {
             padding: 0 20px;
             text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #00ACB4;
+            color: white;
         }
     </style>
 </head>
@@ -46,15 +63,15 @@
     ?>
     <table border="1.0">
         <tr>
-            <td><b>Marca</b></td>
-            <td><b>Modelo</b></td>
-            <td><b>Precio</b></td>
-            <td><b>Foto</b></td>
+            <th><b>Marca</b></th>
+            <th><b>Modelo</b></th>
+            <th><b>Precio</b></th>
+            <th><b>Foto</b></th>
         </tr>
         <tr>
             <td><?php echo $row['marca'] ?></td>
             <td><?php echo $row['modelo'] ?></td>
-            <td>$<?php echo $row['precio_neto'] ?></td>
+            <td>$<?php echo number_format($row['precio_neto'], 2)?></td>
             <td><img src="./fotos/<?php echo $row['foto'] ?>" alt="" width='160' heigth='90'></td>
         </tr>
     </table><br><br>

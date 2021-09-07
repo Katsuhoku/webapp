@@ -3,6 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Estadísticas Vendedores</title>
+    <style>
+        *{
+            font-family: 'Poppins';
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            display: block;
+            text-align: center;     
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <h1>Estadísticas de Vendedores</h1>
@@ -41,6 +59,6 @@
     ?>
 
     <br>
-    <img src="generated/ventas.png" alt="Gráfica de Ventas de Vendedores">
+    <div><img src="generated/ventas.png" alt="Gráfica de Ventas de Vendedores"></div>
 </body>
 </html>
