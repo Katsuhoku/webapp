@@ -19,7 +19,7 @@
     $marca = $row['marca'];
     $modelo = $row['modelo'];
     $precio_neto = $row['precio_neto'];
-    $precio_iva = $precio_neto + ($precio_neto * 0.16);
+    $precio_iva = $precio_neto * 1.16;
     $foto = $row['foto'];
 
     //$pdf->Image('videoteca.jpg',5,8,15);
