@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    margin : 0;
+    padding : 0;
+}
+
+body {
+    font : 73% "Poppins", Arial,  Helvetica, Tahoma, sans-serif;
+    background : #EDF3F4;
+    color : #EDF2F4;
+}
+
+/*      HEADER      */
+header {
+    position: fixed;
+    width: 100%;
+    padding: 16px 48px;
+    display: flex;
+    background-color: #EF233C;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*      FOOTER      */
+footer {
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    border-top: 10px solid #D90429;
+    background: #EF233C;
+}
+
+/*      NAVBAR      */
+
+.text_logo {
+    color: #EDF2F4;
+    cursor: pointer;
+}
+
+.nav_list {
+    list-style: none;
+}
+
+li, a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav_list li {
+    display: inline-block;
+    padding: 0px 24px;
+}
+
+.nav_list li a {
+    color: #EDF2F4;
+    transition: all 0.3s ease 0s;
+}
+
+
+.nav_list li a:hover{
+    color: #8D99AE;
+}
+
+
+/*      PRUEBA        */
+.container {
+    height: 1000px;
+}
