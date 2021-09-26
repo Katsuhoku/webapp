@@ -7,15 +7,17 @@
 body {
     font : 73% "Poppins", Arial,  Helvetica, Tahoma, sans-serif;
     background : #EDF3F4;
-    color : #EDF2F4;
+    color : #222;
 }
 
 /*      HEADER      */
 header {
+    position: fixed;
     width: 100%;
     padding: 16px 48px;
+    top: 0;
     display: flex;
-    background-color: #EF233C;
+    background-color: #357A9F;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -23,11 +25,12 @@ header {
 
 /*      FOOTER      */
 footer {
+    color: #EDF2F4;
     width: 100%;
     padding: 16px;
     text-align: center;
-    border-top: 10px solid #D90429;
-    background: #EF233C;
+    border-top: 10px solid #357ABF;
+    background: #357A9F;
 }
 
 /*      NAVBAR      */
@@ -63,8 +66,142 @@ li, a {
 
 
 /*      PRUEBA        */
-.container {
-    padding-top: 100px;
-    height: 500px;
-    color: black;
+
+main {
+    padding-top: 112px;
+    padding-bottom: 16px;
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+
+
+.introduction_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.introduction_container img{
+    max-width: 50%;
+    flex: 1;
+}
+
+.introduction_container p{
+    flex: 2;
+}
+
+.introduction {
+    align-self: center;
+}
+
+.title {
+    font-size: 72px;
+    font-weight: bold;
+}
+
+.blue_text {
+    color: #357ABF;
+}
+
+
+.flex_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.flex_container img {
+    flex: 1;
+    max-width: 50%;
+}
+
+.flex_container .login_form {
+    flex: 1;
+    padding: 24px;
+}
+
+.inline_text_button {
+    display: flex;
+    flex-direction: row;
+}
+
+.blue_button_container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/*Abous Us*/
+.about_us_section {
+    flex: 1.5;
+    padding-right: 24px;
+}
+
+.about_us_section p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* posts */
+
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.posts_header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post img {
+    width: auto;
+    border-bottom: solid 2px;
+}
+
+.post {
+    display: flex;
+    padding: 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 16px;
+    flex-direction: column;
+}
+
+/* OFFERS */
+
+.offers {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.offers_header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.offer img {
+    width: auto;
+    border-bottom: solid 2px;
+}
+
+.offer {
+    display: flex;
+    padding: 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 16px;
+    flex-direction: column;
 }
