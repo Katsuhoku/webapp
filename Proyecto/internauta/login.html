@@ -9,7 +9,7 @@
 
     <body>
         <header class="header">
-            <a href="index.html" class="text_logo"><h1>Trueques FCC</h1></a>
+            <a href="index.html" class="text_logo"><h2>Trueques FCC</h2></a>
             <nav class="navbar">
                 <ul class="nav_list">
                     <li><a href="../about_us.html"><span>Acerca de nosotros</span></a></li>
@@ -22,25 +22,26 @@
         <main>
             <section class="flex_container">
                 <div class="login_form">
-                    <p class="form_title">Inicio de <span class="blue_text">sesion</span></p>
-                    <div class="text_field">
-                        <p class="text_field_title">Correo electrónico:</p>
-                        <input class="text_field_input" type="text">
-                    </div>
-    
-                    <div class="text_field">
-                        <p class="text_field_title">Contraseña:</p>
-                        <input class="text_field_input" type="text">
-                    </div>
-    
-                    <div class="inline_text_button">
-                        <p class="simple_text">¿Aún no estas registrado?</p>
-                        <button class="button_blue_text">Registrate aquí</button>
-                    </div>
-    
-                    <div class="blue_button_container">
-                        <button class="blue_button">Iniciar Sesión</button>
-                    </div>
+                    <h1 class="form_title">Inicio de <span class="blue_text">sesion</span></h1>
+                    <form action="../user/index.html">
+                        <div class="text_field">
+                            <p class="text_field_title">Correo electrónico:</p>
+                            <input class="text_field_input" type="text" placeholder="example@example.com">
+                        </div>
+        
+                        <div class="text_field">
+                            <p class="text_field_title">Contraseña:</p>
+                            <input class="text_field_input" type="password">
+                        </div>
+        
+                        <div class="inline_text_button">
+                            <p class="simple_text">¿Aún no estas registrado? <a href="./register.html" class="button_blue_text">Registrate aquí</a> </p>
+                        </div>
+        
+                        <div class="blue_button_container">
+                            <input class="blue_button" type="submit" value="Iniciar Sesión">
+                        </div>
+                    </form>
                 </div>
                 <img src="../images/trueque.png">   
             </section>

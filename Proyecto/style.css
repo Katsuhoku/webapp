@@ -33,10 +33,49 @@ footer {
     background: #357A9F;
 }
 
-/*      NAVBAR      */
+/*      MAIN       */
+main {
+    padding-top: 112px;
+    padding-bottom: 16px;
+    padding-left: 48px;
+    padding-right: 48px;
+}
 
+/*      H-Themes     */
+
+h1,.h1 {
+    font-size: 400%;
+}
+
+h2,.h2 {
+    font-size: 285.7%;
+}
+
+h3,.h3 {
+    font-size: 228.5%;
+}
+
+
+h4,.h4 {
+    font-size: 171.4%
+}
+
+h5,.h5 {
+    font-size: 150%
+}
+
+h6,.h6 {
+    font-size: 100%;
+}
+
+p, .p {
+    font-size: small;
+}
+
+/*      NAVBAR      */
 .text_logo {
     color: #EDF2F4;
+    text-decoration: none;
     cursor: pointer;
 }
 
@@ -44,7 +83,7 @@ footer {
     list-style: none;
 }
 
-li, a {
+.nav_list li, .nav_list a {
     text-decoration: none;
     font-weight: 600;
 }
@@ -64,17 +103,82 @@ li, a {
     color: #8D99AE;
 }
 
+/*      TITLES      */
 
-/*      PRUEBA        */
-
-main {
-    padding-top: 112px;
-    padding-bottom: 16px;
-    padding-left: 48px;
-    padding-right: 48px;
+.centered_title {
+    text-align: center;
+    font-weight: bold;
 }
 
+.title {
+    font-weight: bold;
+}
 
+/*      BLUE TEXT       */
+.blue_text {
+    color: #357ABF;
+}
+
+/*      FLEX CONTAINERS     */
+.flex_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex_container img {
+    flex: 1;
+    max-width: 50%;
+}
+
+.login_form {
+    padding: 0 48px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-size: medium;
+}
+
+.login_form p {
+    font-size: medium;
+}
+
+.login_form input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;;
+    border: 1px solid gray;
+    border-radius: 8px;
+    outline: none;
+}
+
+.login_form input[type="submit"] {
+    margin: 16px 0;
+    transition: all 0.3s ease 0s;
+    border: none;
+    background-color: #357ABF;
+    color: #EDF2F4;
+    font-size: medium;
+
+}
+
+.login_form input[type="submit"]:hover {
+    background-color: #256AAF;
+}
+
+.login_form a{
+    text-decoration: none;
+    color: #357ABF;
+}
+
+.login_form a:hover{
+    color: #256AAF;
+}
+
+/*      INTRODUCTION        */
+.introduction {
+    align-self: center;
+}
 
 .introduction_container {
     display: flex;
@@ -90,36 +194,7 @@ main {
     flex: 2;
 }
 
-.introduction {
-    align-self: center;
-}
-
-.title {
-    font-size: 72px;
-    font-weight: bold;
-}
-
-.blue_text {
-    color: #357ABF;
-}
-
-
-.flex_container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-
-.flex_container img {
-    flex: 1;
-    max-width: 50%;
-}
-
-.flex_container .login_form {
-    flex: 1;
-    padding: 24px;
-}
+/*      TEXT + TEXT_BUTTON       */
 
 .inline_text_button {
     display: flex;
@@ -132,7 +207,7 @@ main {
 }
 
 
-/*Abous Us*/
+/*      ABOUT US SECTION        */
 .about_us_section {
     flex: 1.5;
     padding-right: 24px;
@@ -143,9 +218,7 @@ main {
     text-justify: inter-word;
 }
 
-/* posts */
-
-
+/*      POSTS       */
 .posts {
     display: grid;
     grid-template-columns: repeat(4, 25%);
@@ -161,6 +234,7 @@ main {
     justify-content: space-between;
 }
 
+/*      POST        */
 .post img {
     width: auto;
     border-bottom: solid 2px;
@@ -175,8 +249,67 @@ main {
     flex-direction: column;
 }
 
-/* OFFERS */
+.post .id_post {
+    font-weight: 700;
+}
 
+.post .product_name {
+    font-weight: 500;
+}
+
+.post .post_date_label {
+
+}
+
+.post .product_description {
+
+}
+
+.post .asked_product {
+    font-weight: 500;
+}
+
+.post .post_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.post .post_buttons button {
+    margin: 0 4px;
+}
+
+.post .red_outline_button {
+    border-radius: 8px;
+    padding: 8px;
+    transition: all 0.3s ease 0s;
+    border-color: #E3242B;
+    color: #E3242B;
+}
+
+.post .red_outline_button:hover {
+    cursor: pointer;
+    background: #E3242B;
+    color: #EDF2F4;
+}
+
+.post .red_button {
+    border: hidden;
+    border-radius: 8px;
+    padding: 8px;
+    transition: all 0.3s ease 0s;
+    background: #E3242B;
+    color: #EDF2F4;
+    
+}
+
+.post .red_button:hover {
+    cursor: pointer;
+    background: #DD242B;
+}
+
+
+/*      OFFERS      */
 .offers {
     display: grid;
     grid-template-columns: repeat(4, 25%);
@@ -192,6 +325,7 @@ main {
     justify-content: space-between;
 }
 
+/*      OFFER       */
 .offer img {
     width: auto;
     border-bottom: solid 2px;
