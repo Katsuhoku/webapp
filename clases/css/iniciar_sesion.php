@@ -24,9 +24,15 @@
   <div id="container">
     <div id="content">
       <h2>Inicio de sesi&oacute;n </h2>
-      <p>En esta p&aacute;gina encontraras las &eacute;liculas de mayor &eacute;xito a nivel internacional. Para poder editar alguna p&eacute;lucila debes estar registrado. </p>
+      <p>
+	  	<form action="validarUsuario.php" method="post">
+		Usuario: <input type="text" name="usu" required />
+	  	<br/><br/>
+		Password: <input type="password" name="passwd" required />
+		<br/><br/>
+		<input type="submit" name="Enviar" value="Entrar" />
+	  </p>
       <p>&nbsp;</p>
-    </div>
   </div>
 </div>
 <div id="footer"><br/>
