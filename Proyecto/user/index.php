@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    if ($_SESSION['type'] != 0) header("Location: index.php");
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,18 +14,22 @@
 
     <body>
         <header class="header">
-            <a href="index.html" class="text_logo"><h2>Trueques FCC</h2></a>
+            <a href="index.php" class="text_logo"><h2>Trueques FCC</h2></a>
             <nav class="navbar">
                 <ul class="nav_list">
-                    <li><a href="profile.html"><span>Mi perfil</span></a></li>
-                    <li><a href="../about_us.html"><span>Acerca de nosotros</span></a></li>
-                    <li><a href="../internauta/login.html"><span>Cerrar sesión</span></a></li>
+                    <li><a href="profile.php"><span>Mi perfil</span></a></li>
+                    <li><a href="../about_us.php"><span>Acerca de nosotros</span></a></li>
+                    <li><a href="../salir.php"><span>Cerrar sesión</span></a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <h1 class="title">Hola, <span class="blue_text">Usuario</span>!</h1>
+            <h1 class="title">Hola, <span class="blue_text">
+                <?php
+                    echo "{$_SESSION['username']}";
+                ?>
+            </span>!</h1>
             <section class="posts_section">
                 <div class="posts_header">
                     <h2>Publicaciones más recientes</h2>

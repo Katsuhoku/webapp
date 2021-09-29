@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    if ($_SESSION['type'] != 0) header("Location: index.php");
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,18 +14,28 @@
 
     <body>
         <header class="header">
-            <a href="index.html" class="text_logo"><h2>Trueques FCC</h2></a>
+            <a href="index.php" class="text_logo"><h2>Trueques FCC</h2></a>
             <nav class="navbar">
                 <ul class="nav_list">
-                    <li><a href="profile.html"><span>Mi perfil</span></a></li>
-                    <li><a href="../about_us.html"><span>Acerca de nosotros</span></a></li>
-                    <li><a href="../internauta/login.html"><span>Cerrar sesión</span></a></li>
+                    <li><a href="profile.php"><span>Mi perfil</span></a></li>
+                    <li><a href="../about_us.php"><span>Acerca de nosotros</span></a></li>
+                    <li><a href="../salir.php"><span>Cerrar sesión</span></a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <h1 class="title">Mi <span class="blue_text">perfil</span></h1>
+            <h1 class="title, centered_title">Mi <span class="blue_text">perfil</span></h1>
+            <h2 class="blue_text">Información de usuario</h2>
+            <h3>Nombre de usuario: <?php 
+                echo "{$_SESSION['username']}";
+            ?></h3>
+            <h3>Nombre: <?php 
+                echo "{$_SESSION['name']}";
+            ?></h3>
+            <h4>Correo electrónico: <?php 
+                echo "{$_SESSION['email']}";
+            ?></h4>
             <section class="posts_section">
                 <div class="posts_header">
                     <h2>Mis publicaciones</h2>

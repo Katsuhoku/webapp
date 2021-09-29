@@ -72,6 +72,10 @@ p, .p {
     font-size: small;
 }
 
+.error_text {
+    color: #E3242B;
+}
+
 /*      NAVBAR      */
 .text_logo {
     color: #EDF2F4;

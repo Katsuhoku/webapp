@@ -4,39 +4,43 @@
         <title>Trueques FCC</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="../style.css" rel="stylesheet" type="text/css"/>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>
 
     <body>
         <header class="header">
-            <a href="index.html" class="text_logo"><h2>Trueques FCC</h2></a>
+            <a href="index.php" class="text_logo"><h2>Trueques FCC</h2></a>
             <nav class="navbar">
                 <ul class="nav_list">
-                    <li><a href="../about_us.html"><span>Acerca de nosotros</span></a></li>
-                    <li><a href="login.html"><span>Iniciar sesion</span></a></li>
-                    <li><a href="register.html"><span>Registrarse</span></a></li>
+                    <li><a href="about_us.php"><span>Acerca de nosotros</span></a></li>
+                    <li><a href="login.php"><span>Iniciar sesion</span></a></li>
+                    <li><a href="register.php"><span>Registrarse</span></a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
             <section class="flex_container">
-                <img src="../images/trueque.png">   
+                <img src="images/trueque.png">   
                 <div class="login_form">
                     <h1 class="form_title">Registro</h1>
-                    <form action="../user/index.html">
+                    <form action="register_user.php" method="POST">
+                        <div class="text_field">
+                            <p class="text_field_title">Nombre:</p>
+                            <input class="text_field_input" type="text" name="name" placeholder="Nombre(s) apellido(s)" required>
+                        </div>
                         <div class="text_field">
                             <p class="text_field_title">Nombre de usuario:</p>
-                            <input class="text_field_input" type="text" placeholder="Usuario95">
+                            <input class="text_field_input" type="text" name="username" placeholder="Robot95" required>
                         </div>
                         <div class="text_field">
                             <p class="text_field_title">Correo electrónico:</p>
-                            <input class="text_field_input" type="text" placeholder="example@example.com">
+                            <input class="text_field_input" type="text" name="email" placeholder="example@example.com" required>
                         </div>
         
                         <div class="text_field">
                             <p class="text_field_title">Contraseña:</p>
-                            <input class="text_field_input" type="password">
+                            <input class="text_field_input" type="password" name="password" required>
                         </div>
         
                         <div class="inline_text_button">
