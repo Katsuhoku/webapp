@@ -3,7 +3,7 @@
 <head>
 <title>videoteca</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
 <div id="wrap">
@@ -15,7 +15,7 @@
           <li><a href="index.php" ><span>Inicio</span></a></li>
           <li><a href="peliculas.php" ><span>Peliculas</span></a></li>
           <li><a href="registrar.php" class="current"><span>Registrar</span></a></li>
-          <li><a href="iniciar_sesion.php"><span>Iniciar sesi�n</span></a></li>
+          <li><a href="iniciar_sesion.php"><span>Iniciar sesión</span></a></li>
           <li><a href="acerca_de_nosotros.php"><span>Acerca de nosotros</span></a></li>
         </ul>
       </div>
@@ -24,7 +24,7 @@
   <div id="container">
     <div id="content">
       <h2>Registro </h2>
-      <p>En esta p&aacute;gina encontraras las &eacute;liculas de mayor &eacute;xito a nivel internacional. Para poder editar alguna p&eacute;lucila debes estar registrado. </p>
+      <p>En esta página encontraras las películas de mayor éxito a nivel internacional. Para poder editar alguna película debes estar registrado. </p>
       <p>&nbsp;</p>
     </div>
   </div>

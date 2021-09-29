@@ -1,9 +1,13 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>videoteca</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
 <div id="wrap">
@@ -15,15 +19,22 @@
           <li><a href="#" class="current"><span>Inicio</span></a></li>
           <li><a href="peliculas.php"><span>Peliculas</span></a></li>
           <li><a href="registrar.php"><span>Registrar</span></a></li>
-          <li><a href="iniciar_sesion.php"><span>Iniciar sesión</span></a></li>
-          <li><a href="acerca_de_nosotros.php"><span>Acerca de nosotros</span></a></li>
+          <?php
+            if (!isset($_SESSION['username'])) {
+              echo "<li><a href='iniciar_sesion.php'><span>Iniciar sesiÃ³n</span></a></li>";
+              echo "<li><a href='acerca_de_nosotros.php'><span>Acerca de nosotros</span></a></li>";
+            }
+            else {
+              echo "<li><a href='salir.php'><span>Salir</span></a></li>";
+            }
+          ?>
         </ul>
       </div>
     </div>
   </div>
   <div id="container">
     <div id="content">
-      <h2>Bienvenido</h2>
+      <h2>Bienvenido<?php if (isset($_SESSION['username'])) echo ", ".$_SESSION['username']; ?></h2>
       <p>En esta p&aacute;gina encontraras las &eacute;liculas de mayor &eacute;xito a nivel internacional. Para poder editar alguna p&eacute;lucila debes estar registrado. </p>
       <blockquote>This template has been tested in Mozilla Firefox and IE7. The page validates as XHTML 1.0 Transitional using valid CSS. It will work in browser widths of 800x600, 1024x768 &amp; 1280x1064. The images used in this template are courtesy of <a href="http://www.sxc.hu/" title="free images">stock xchng</a>. The top navigation menu is from <a href="http://www.13styles.com/" title="free CSS menus">13 Styles</a> and has been amended to suit this template. <br />
         For more FREE CSS templates visit <a href="http://www.mitchinson.net">my website</a>.</blockquote>

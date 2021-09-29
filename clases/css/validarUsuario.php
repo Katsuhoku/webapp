@@ -11,7 +11,10 @@
     
     if ($row = mysqli_fetch_array($result)) {
         if ($row['password'] == $pas) {
-            header("Location: indexUsuario.php");
+            session_start();
+            $_SESSION['username'] = $row['usuario'];
+            header("Location: index.php");
+            exit();
             //echo "Usuario registrado";
         } else {
             echo "Error en password";

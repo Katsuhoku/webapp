@@ -3,7 +3,7 @@
 <head>
 <title>videoteca</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
 <div id="wrap">
@@ -15,7 +15,7 @@
           <li><a href="index.php" ><span>Inicio</span></a></li>
           <li><a href="peliculas.php" ><span>Peliculas</span></a></li>
           <li><a href="registrar.php"><span>Registrar</span></a></li>
-          <li><a href="iniciar_sesion.php" ><span>Iniciar sesión</span></a></li>
+          <li><a href="iniciar_sesion.php"><span>Iniciar sesiÃ³n</span></a></li>
           <li><a href="acerca_de_nosotros.php" class="current"><span>Acerca de nosotros</span></a></li>
         </ul>
       </div>
@@ -24,8 +24,8 @@
   <div id="container">
     <div id="content">
       <h2>Acerca de nosotros  </h2>
-      <p>Esiel Kevin Arizmendi Ram&iacute;rez </p>
-      <p>esiel_kar@hotmail.com</p>
+      <p>Marco Antonio Coria Rios (201374576)</p>
+      <p>marco.coria@alumno.buap.mx</p>
       <p>&nbsp;</p>
     </div>
   </div>

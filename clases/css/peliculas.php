@@ -3,7 +3,7 @@
 <head>
 <title>videoteca</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
 <div id="wrap">
@@ -15,7 +15,7 @@
           <li><a href="index.php" ><span>Inicio</span></a></li>
           <li><a href="peliculas.php" class="current"><span>Peliculas</span></a></li>
           <li><a href="registrar.php"><span>Registrar</span></a></li>
-          <li><a href="iniciar_sesion.php"><span>Iniciar sesión</span></a></li>
+          <li><a href="iniciar_sesion.php"><span>Iniciar sesiÃ³n</span></a></li>
           <li><a href="acerca_de_nosotros.php"><span>Acerca de nosotros</span></a></li>
         </ul>
       </div>
@@ -24,21 +24,19 @@
   <div id="container">
     <div id="content">
       <h2>Listado de peliculas </h2>
-      <p>
+	  <table border='1'>
+		  <tr>
+			<td align='center'><b>ID</b></td>
+			<td align='center'><b>Titulo</b></td>
+			<td align='center'><b>Director</b></td>
+			<td align='center'><b>Actor</b></td>
+			<td align='center'><b>Imagen</b></td>
+			<td align='center'><b>Ranking</b></td>
+		  </tr>
 		  <?php 
 			$link = mysqli_connect("localhost", "root", "");
 			mysqli_select_db($link, "videoteca");
 			$result = mysqli_query($link, "select * from peliculas");
-	
-			echo "<table border='1'>";
-			echo "<tr>";
-			echo "<td align='center'><b>ID</b></td>";
-			echo "<td align='center'><b>Titulo</b></td>";
-			echo "<td align='center'><b>Director</b></td>";
-			echo "<td align='center'><b>Actor</b></td>";
-			echo "<td align='center'><b>Imagen</b></td>";
-			echo "<td align='center'><b>Ranking</b></td>";
-			echo "</tr>";
 			while ($row = mysqli_fetch_array($result)) {
 				$id = $row['id_pelicula'];
 				$ti = $row['titulo'];
@@ -60,8 +58,8 @@
 	
 			mysqli_free_result($result);
 			mysqli_close($link);
-		?>
-	  </p>
+		  ?>
+	  </table>
     </div>
   </div>
 </div>

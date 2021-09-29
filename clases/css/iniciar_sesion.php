@@ -3,7 +3,7 @@
 <head>
 <title>videoteca</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
 <div id="wrap">
@@ -15,7 +15,7 @@
           <li><a href="index.php" ><span>Inicio</span></a></li>
           <li><a href="peliculas.php" ><span>Peliculas</span></a></li>
           <li><a href="registrar.php"><span>Registrar</span></a></li>
-          <li><a href="iniciar_sesion.php" class="current"><span>Iniciar sesión</span></a></li>
+          <li><a href="iniciar_sesion.php" class="current"><span>Iniciar sesiÃ³n</span></a></li>
           <li><a href="acerca_de_nosotros.php"><span>Acerca de nosotros</span></a></li>
         </ul>
       </div>
