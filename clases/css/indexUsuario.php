@@ -6,6 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 </head>
 <body>
+<?PHP session_start();
+  if(!$_SESSION['username'] || $_SESSION['tipoUsuario']!=1 ) header("Location:index.php");
+?>
 <div id="wrap">
   <div id="masthead">
     <h1>Videoteca</h1>
@@ -23,7 +26,7 @@
   </div>
   <div id="container">
     <div id="content">
-      <h2>Bienvenido</h2>
+      <h2>Bienvenido: <?php echo $_SESSION['username']; ?></h2>
       <p>En esta p&aacute;gina encontraras las &eacute;liculas de mayor &eacute;xito a nivel internacional. Para poder editar alguna p&eacute;lucila debes estar registrado. </p>
       <blockquote>This template has been tested in Mozilla Firefox and IE7. The page validates as XHTML 1.0 Transitional using valid CSS. It will work in browser widths of 800x600, 1024x768 &amp; 1280x1064. The images used in this template are courtesy of <a href="http://www.sxc.hu/" title="free images">stock xchng</a>. The top navigation menu is from <a href="http://www.13styles.com/" title="free CSS menus">13 Styles</a> and has been amended to suit this template. <br />
         For more FREE CSS templates visit <a href="http://www.mitchinson.net">my website</a>.</blockquote>
