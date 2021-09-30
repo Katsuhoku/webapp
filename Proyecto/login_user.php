@@ -9,7 +9,8 @@
         USER_USERNAME,
         USER_NAME,
         USER_EMAIL,   
-        USER_PASSWORD 
+        USER_PASSWORD,
+        USER_TYPE 
         from USERS where USER_USERNAME = '$usernameOrEmail' OR USER_EMAIL = '$usernameOrEmail'");
     
     if ($row = mysqli_fetch_array($result)) {
