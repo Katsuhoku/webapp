@@ -15,6 +15,10 @@ CREATE TABLE IF NOT EXISTS USERS (
     UNIQUE (USER_EMAIL)
 );
 
+INSERT INTO USERS(USER_USERNAME, USER_PASSWORD, USER_NAME, USER_EMAIL, USER_TYPE) VALUES
+    ("MarcoCoria", "123456", "Marco A. Coria Rios", "marco_coria@hotmail.com", 0),
+    ("Esiel15", "123456", "Esiel K. Arizmendi Ramirez", "esiel_kar@hotmail.com", 1);
+
 
 
 
