@@ -1,6 +1,6 @@
 /* source C:/wamp64/www/webapp/proyecto/TRUEQUES_FCC.sql */
 
-delete database if exists TRUEQUES_FCC;
+drop database if exists TRUEQUES_FCC;
 create database TRUEQUES_FCC;
 use TRUEQUES_FCC;
 
