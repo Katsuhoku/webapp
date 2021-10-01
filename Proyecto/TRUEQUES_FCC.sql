@@ -1,7 +1,8 @@
 /* source C:/wamp64/www/webapp/proyecto/TRUEQUES_FCC.sql */
 
-/*create database TRUEQUES_FCC;
-use TRUEQUES_FCC;*/
+delete database if exists TRUEQUES_FCC;
+create database TRUEQUES_FCC;
+use TRUEQUES_FCC;
 
 CREATE TABLE IF NOT EXISTS USERS (
     USER_ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
