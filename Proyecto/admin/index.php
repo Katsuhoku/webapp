@@ -1,6 +1,12 @@
 <?php
     session_start();
-    if ($_SESSION['type'] != 1) header("Location: index.php");
+    if ($_SESSION == null) {
+        header("Location: ../index.php");
+        session_destroy();
+    } else {
+        if ($_SESSION['type'] != 1) header("Location: ../index.php");
+    }
+    
 ?>
 
 <!DOCTYPE html>

@@ -44,7 +44,7 @@
                         </div>
         
                         <div class="inline_text_button">
-                            <p class="simple_text">¿Ya tienes cuenta? <a href="./login.html" class="button_blue_text">Inicia Sesión</a></p>
+                            <p class="simple_text">¿Ya tienes cuenta? <a href="./login.php" class="button_blue_text">Inicia Sesión</a></p>
                         </div>
         
                         <div class="blue_button_container">

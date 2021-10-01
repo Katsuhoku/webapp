@@ -35,7 +35,7 @@
                         </div>
         
                         <div class="inline_text_button">
-                            <p class="simple_text">¿Aún no estas registrado? <a href="./register.html" class="button_blue_text">Registrate aquí</a> </p>
+                            <p class="simple_text">¿Aún no estas registrado? <a href="./register.php" class="button_blue_text">Registrate aquí</a> </p>
                         </div>
         
                         <div class="blue_button_container">
