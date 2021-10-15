@@ -9,7 +9,7 @@
    $link=Conectarse(); 
    $id=$_GET['id_pelicula'];
 //   echo "el valor es : $id";  
-   mysql_query("delete from pelicula where id_pelicula = '$id'",$link); 
+   mysqli_query($link, "delete from peliculas where id_pelicula = '$id'"); 
    header("Location: borrarnew.php"); 
 ?> 
 </body>

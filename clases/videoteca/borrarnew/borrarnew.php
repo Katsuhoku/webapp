@@ -1,11 +1,11 @@
 <html> 
 <head> 
-   <title>Ejemplo de Eliminación</title> 
+   <title>Ejemplo de Eliminaciï¿½n</title> 
 
 <script LANGUAGE="JavaScript">
 function confirmSubmit()
 {
-var eli=confirm("Está seguro de eliminar este registro?");
+var eli=confirm("EstÃ¡ seguro de eliminar este registro?");
 if (eli) return true ;
 else return false ;
 }
@@ -14,12 +14,12 @@ else return false ;
 </head> 
 <body> 
 
-<H2>Eliminación de Registros en la tabla pelicula</H2> 
+<H2>EliminaciÃ³n de Registros en la tabla pelÃ­cula</H2> 
 
 <?php 
    include("conexion.php"); 
    $link=Conectarse(); 
-   $result=mysql_query("select * from pelicula",$link); 
+   $result = mysqli_query($link, "select * from peliculas"); 
 ?> 
    <TABLE BORDER=1> 
       <TR><TD bgcolor="#FFFFCC"><B>ID</B></TD>
@@ -31,24 +31,24 @@ else return false ;
      </TR> 
 <?php       
 
-  while($row = mysql_fetch_array($result)) 
+  while($row = mysqli_fetch_array($result)) 
   { 
-    $ti=$row["titulo"];
-    $di=$row["director"];
-	$id=$row["id_pelicula"];
-    printf("<tr><td>%d</td><td>%s</td><td>%s</td>
-	       <td><center>
-          <a onclick=\"return confirmSubmit()\"href=\"borrar2new.php?id_pelicula=%s\"><img src='eliminar.bmp' width='14' height='14' border='0'></a>
+   $ti=$row["titulo"];
+   $di=$row["director"];
+   $id=$row["id_pelicula"];
+   printf("<tr><td>%d</td><td>%s</td><td>%s</td>
+	      <td><center>
+         <a onclick=\"return confirmSubmit()\"href=\"borrar2new.php?id_pelicula=%s\"><img src='eliminar.bmp' width='14' height='14' border='0'></a>
 		   </center>
-           </td>
+         </td>
 		   <td><center>
 		   <a href=\"actualizanew.php?id_pelicula=%s\"><img src='actualiza.jpg' width='25' height='25' border='0'></a>
 		   </center></td>
 		   </tr>",$id,$ti,$di,$id,$id); 
    } 
 
-   mysql_free_result($result); 
-   mysql_close($link); 
+   mysqli_free_result($result); 
+   mysqli_close($link); 
 ?> 
 </table> 
 </body> 
