@@ -51,10 +51,10 @@ CREATE TABLE IF NOT EXISTS OFFERS (
     FOREIGN KEY (OFFER_PRODUCT_ID) REFERENCES PRODUCTS(PRODUCT_ID)
 );
 
-INSERT INTO USERS(USER_USERNAME, USER_PASSWORD, USER_NAME, USER_EMAIL, USER_TYPE) VALUES
-    ("EsielAdmin", "123456", "Esiel K. Arizmendi Ramirez", "esiel@trueques.com", 1),
-    ("MarcoCoria", "123456", "Marco A. Coria Rios", "marco_coria@hotmail.com", 0),
-    ("Esiel15", "123456", "Esiel K. Arizmendi Ramirez", "esiel_kar@hotmail.com", 0);
+INSERT INTO USERS(USER_USERNAME, USER_PASSWORD, USER_NAME, USER_EMAIL, USER_DIRECTION, USER_TYPE) VALUES
+    ("EsielAdmin", "123456", "Esiel K. Arizmendi Ramirez", "esiel@trueques.com", null, 1),
+    ("MarcoCoria", "123456", "Marco A. Coria Rios", "marco_coria@hotmail.com", "Avenida San Claudio, Blvrd 14 Sur, Cdad. Universitaria, 72592 Puebla, Pue.", 0),
+    ("Esiel15", "123456", "Esiel K. Arizmendi Ramirez", "esiel_kar@hotmail.com","Avenida San Claudio, Blvrd 14 Sur, Cdad. Universitaria, 72592 Puebla, Pue.", 0);
 
 INSERT INTO PRODUCTS(USER_ID, PRODUCT_NAME, PRODUCT_STATE, PRODUCT_DESCRIPTION) VALUES
     (3, "iPad Mini 4", 1, "Estetica 9.5, color dorado, chip Apple A8, camara de 8 MP"),
