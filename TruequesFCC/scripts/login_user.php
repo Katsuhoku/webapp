@@ -9,7 +9,8 @@
     $result = mysqli_query($link, "select 
         USER_USERNAME,
         USER_NAME,
-        USER_EMAIL,   
+        USER_EMAIL,
+        USER_DIRECTION,   
         USER_PASSWORD,
         USER_TYPE 
         from USERS where USER_USERNAME = '$usernameOrEmail' OR USER_EMAIL = '$usernameOrEmail'");
@@ -19,6 +20,7 @@
             $_SESSION['username'] = $row['USER_USERNAME'];
             $_SESSION['name'] = $row['USER_NAME'];
             $_SESSION['email'] = $row['USER_EMAIL'];
+            $_SESSION['direction'] = $row['USER_DIRECTION'];
             $_SESSION['type'] = $row['USER_TYPE'];
             header("Location: ../index");
 

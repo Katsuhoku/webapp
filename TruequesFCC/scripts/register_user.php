@@ -5,6 +5,7 @@
     $name=$_REQUEST['name'];
     $username=$_REQUEST['username'];
     $email=$_REQUEST['email'];
+    $direction=$_REQUEST['direction'];
     $password=$_REQUEST['password'];
 
     $link = connect();
@@ -13,14 +14,15 @@
     //El usuario no existe
     if (mysqli_num_rows($result) == 0) {
         $result2 = mysqli_query($link, "INSERT INTO USERS 
-            (USER_USERNAME, USER_NAME, USER_EMAIL, USER_PASSWORD) VALUES 
-            ('$username', '$name', '$email', '$password')"
+            (USER_USERNAME, USER_NAME, USER_EMAIL, USER_DIRECTION, USER_PASSWORD) VALUES 
+            ('$username', '$name', '$email', '$direction', '$password')"
         );
 
         if ($result2) {
             $_SESSION['username'] = $username;
             $_SESSION['name'] = $name;
             $_SESSION['email'] = $email;
+            $_SESSION['direction'] = $direction;
             $_SESSION['type'] = mysqli_fetch_array($result)['USER_TYPE'];
             header("Location: ../index");
         }
@@ -30,6 +32,7 @@
             $_SESSION['username'] = $username;
             $_SESSION['name'] = $name;
             $_SESSION['email'] = $email;
+            $_SESSION['direction'] = $direction;
         $row = mysqli_fetch_array($result);
         if ($row['USER_USERNAME'] == $username) {
             $_SESSION['register_error'] = 1;
