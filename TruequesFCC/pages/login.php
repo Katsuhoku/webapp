@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-6">
                 <h1 class="form_title">Inicio de <span class="blue_text">sesion</span></h1>
-                <form action="login_user.php" method="POST">
+                <form action="./scripts/login_user.php" method="POST">
                     <div class="text_field">
                         <p class="text_field_title">Nombre de usuario / Correo electrónico:</p>
                         <input class="text_field_input" type="text" name="usernameOrEmail" placeholder="Usuario95" value="<?php

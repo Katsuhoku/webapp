@@ -19,18 +19,18 @@
             $_SESSION['name'] = $row['USER_NAME'];
             $_SESSION['email'] = $row['USER_EMAIL'];
             $_SESSION['type'] = $row['USER_TYPE'];
-            header("Location: ./index.php");
+            header("Location: ../index");
 
             
         } else {
             $_SESSION['usernameOrEmail'] = $usernameOrEmail;
             $_SESSION['login_error'] = 1;
-            header("Location: ./login");
+            header("Location: ../login");
         } 
     } else {
         $_SESSION['usernameOrEmail'] = $usernameOrEmail;
         $_SESSION['login_error'] = 2;
-        header("Location: ./login");
+        header("Location: ../login");
     }
 
     mysqli_free_result($result);

@@ -4,7 +4,7 @@
             <img class="col-6" src="img/trueque.png">   
             <div class="col-6">
                 <h1 class="form_title">Registro</h1>
-                <form action="register_user.php" method="POST">
+                <form action="./scripts/register_user.php" method="POST">
                     <div class="text_field">
                         <p class="text_field_title">Nombre:</p>
                         <input class="text_field_input" type="text" name="name" placeholder="Nombre(s) apellido(s)" value="<?php

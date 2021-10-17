@@ -21,7 +21,7 @@
             $_SESSION['name'] = $name;
             $_SESSION['email'] = $email;
             $_SESSION['type'] = mysqli_fetch_array($result)['USER_TYPE'];
-            header("Location: ./index.php");
+            header("Location: ../index");
         }
         mysqli_free_result($result2);
     //El usuario existe 
@@ -37,7 +37,7 @@
         } else {
             $_SESSION['register_error'] = 3;
         }
-        header("Location: ./register");
+        header("Location: ../register");
     }
     mysqli_free_result($result); 
     mysqli_close($link);

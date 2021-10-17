@@ -21,6 +21,6 @@
         </ul>
     </li>
     <li class="nav-item m-2">
-        <button class="btn btn-outline-primary" onclick="location.href = 'logout'">Cerrar sesión</button>
+        <button class="btn btn-outline-primary" onclick="location.href = './scripts/logout'">Cerrar sesión</button>
     </li>
 </ul>
