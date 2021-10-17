@@ -19,11 +19,12 @@
         );
 
         if ($result2) {
-            $_SESSION['username'] = $username;
-            $_SESSION['name'] = $name;
-            $_SESSION['email'] = $email;
-            $_SESSION['direction'] = $direction;
-            $_SESSION['type'] = mysqli_fetch_array($result)['USER_TYPE'];
+            $row = mysqli_fetch_array($result)['USER_TYPE'];
+            $_SESSION['username'] = $row['USER_USERNAME'];
+            $_SESSION['name'] = $row['USER_NAME'];
+            $_SESSION['email'] = $row['USER_EMAIL'];
+            $_SESSION['direction'] = $row['USER_DIRECTION'];
+            $_SESSION['type'] = $row['USER_TYPE'];
             header("Location: ../index");
         }
         mysqli_free_result($result2);
