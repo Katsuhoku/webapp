@@ -4,8 +4,7 @@
         String $name = "Nombre del producto",
         String $description = "Descripción del producto", 
         String $date = "27/10/2021",
-        int $state = null,
-        String $wish_list = null,
+        String $state = null,
         String $img = "./img/logo.png"
     ) {
         echo '
