@@ -7,6 +7,7 @@
 
     $link = connect();
     $result = mysqli_query($link, "select 
+        USER_ID,
         USER_USERNAME,
         USER_NAME,
         USER_EMAIL,
@@ -17,6 +18,7 @@
     
     if ($row = mysqli_fetch_array($result)) {
         if ($row['USER_PASSWORD'] == $password) {
+            $_SESSION['user_id'] = $row['USER_ID'];
             $_SESSION['username'] = $row['USER_USERNAME'];
             $_SESSION['name'] = $row['USER_NAME'];
             $_SESSION['email'] = $row['USER_EMAIL'];

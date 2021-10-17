@@ -19,7 +19,8 @@
         );
 
         if ($result2) {
-            $row = mysqli_fetch_array($result)['USER_TYPE'];
+            $row = mysqli_fetch_array($result);
+            $_SESSION['user_id'] = $row['USER_ID'];
             $_SESSION['username'] = $row['USER_USERNAME'];
             $_SESSION['name'] = $row['USER_NAME'];
             $_SESSION['email'] = $row['USER_EMAIL'];
