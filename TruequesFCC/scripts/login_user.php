@@ -1,10 +1,11 @@
 <?php
+    require_once "./connection.php";
+
     session_start();
     $usernameOrEmail = $_REQUEST['usernameOrEmail'];
     $password = $_REQUEST['password'];
 
-    $link = mysqli_connect("localhost", "root", "");
-    mysqli_select_db($link, "TRUEQUES_FCC");
+    $link = connect();
     $result = mysqli_query($link, "select 
         USER_USERNAME,
         USER_NAME,

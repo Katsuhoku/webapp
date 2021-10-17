@@ -1,12 +1,13 @@
 <?php
+    require_once "./connection.php";
+    
     session_start();
     $name=$_REQUEST['name'];
     $username=$_REQUEST['username'];
     $email=$_REQUEST['email'];
     $password=$_REQUEST['password'];
 
-    $link = mysqli_connect("localhost", "root", "");
-    mysqli_select_db($link, "TRUEQUES_FCC");
+    $link = connect();
     $result = mysqli_query($link, "SELECT * FROM USERS WHERE USER_USERNAME = '$username' OR USER_EMAIL = '$email'");
     
     //El usuario no existe

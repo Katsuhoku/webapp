@@ -20,7 +20,12 @@
         <li><a class="dropdown-item" href="#">Editar perfil</a></li>
         </ul>
     </li>
+    
+    
     <li class="nav-item m-2">
-        <button class="btn btn-outline-primary" onclick="location.href = './scripts/logout'">Cerrar sesión</button>
+        <a href="./upload_product" class="btn btn-outline-primary">Subir producto</a>
+    </li>
+    <li class="nav-item m-2">
+        <a href="./scripts/logout" class="btn btn-outline-secondary">Cerrar sesión</a>
     </li>
 </ul>
