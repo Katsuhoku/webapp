@@ -11,9 +11,6 @@
                             if (array_key_exists('name', $_SESSION))
                                 echo $_SESSION['name'];?>" required>
                     </div>
-                    <div class="invalid-feedback">
-                        Proporcionanos tu nombre
-                    </div>
 
                     <div class="mb-3">
                         <label for="username" class="form-label">Nombre de usuario</label>
