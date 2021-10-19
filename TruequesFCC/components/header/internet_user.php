@@ -5,9 +5,9 @@
         href="./about_us">Acerca de</a>
     </li>
     <li class="nav-item m-2">
-        <button class="btn btn-outline-primary" onclick="location.href = './login'">Iniciar sesión</button>
+        <button class="btn btn-outline-primary" onclick="location.href = 'login'">Iniciar sesión</button>
     </li>
     <li class="nav-item m-2">
-        <button class="btn btn-primary" onclick="location.href = './register'">Registrarse</button>
+        <a class="btn btn-primary" href ='register'>Registrarse</a>
     </li>
 </ul>

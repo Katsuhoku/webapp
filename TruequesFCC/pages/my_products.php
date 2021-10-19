@@ -1,5 +1,6 @@
 <?php
     require_once "scripts/read_products.php";
+    require_once "scripts/read_product_images.php";
     require_once "components/product_cards.php";
 ?>
 
@@ -18,13 +19,18 @@
                 $result = readAllOwnProducts($_SESSION['user_id']);
                 if ($data = mysqli_fetch_all($result, MYSQLI_ASSOC)) {
                     foreach ($data as $item) {
+                        $image_result = readMainImageByProduct($item['PRODUCT_ID']);
+                        $main_image = mysqli_fetch_array($image_result);
+
                         create_own_product_card(
                             $item['PRODUCT_ID'],
                             $item['PRODUCT_NAME'],
                             $item['PRODUCT_DESCRIPTION'],
                             $item['PRODUCT_DATE'],
-                            $item['PRODUCT_STATE'] 
+                            $item['PRODUCT_STATE'],
+                            $main_image['IMAGE_ROUTE']
                         );
+                        mysqli_free_result($image_result);
                     }
                 }
                 mysqli_free_result($result);
