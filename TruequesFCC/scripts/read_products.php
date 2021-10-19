@@ -48,6 +48,22 @@
         return $result;
     }
 
+    function readLastOwnProduct($user_id) {
+        $link = connect();
+        $result = mysqli_query($link, "select
+            PRODUCT_ID,
+            USER_ID, 
+            PRODUCT_NAME,
+            PRODUCT_DESCRIPTION,
+            PRODUCT_STATE,   
+            PRODUCT_DATE
+            FROM PRODUCTS where USER_ID = '$user_id'
+            ORDER BY PRODUCT_DATE DESC
+            LIMIT 1");
+        mysqli_close($link);
+        return $result;
+    }
+
     function readProductById($id) {
         $link = connect();
         $result = mysqli_query($link, "select

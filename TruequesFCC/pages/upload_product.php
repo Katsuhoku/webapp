@@ -8,7 +8,7 @@
         <div class="row">
             <h2 class="h2">Datos del producto</h2>
         </div>
-        <form action="./scripts/create_product.php" method="POST">
+        <form action="./scripts/create_product.php" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="product_name" class="form-label">Nombre del producto</label>
                 <input type="text" class="form-control" id="product_name" name="product_name" placeholder="Play Station 5, Xbox 360, iPhone 8" required>
