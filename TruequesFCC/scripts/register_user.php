@@ -1,5 +1,5 @@
 <?php
-    require_once "./connection.php";
+    require_once "./read_users.php";
     
     session_start();
     $name=$_REQUEST['name'];
@@ -9,7 +9,7 @@
     $password=$_REQUEST['password'];
 
     $link = connect();
-    $result = mysqli_query($link, "SELECT * FROM USERS WHERE USER_USERNAME = '$username' OR USER_EMAIL = '$email'");
+    $result = findUserByUsernmameOrEmail($username, $email);
     
     //El usuario no existe
     if (mysqli_num_rows($result) == 0) {
@@ -19,6 +19,8 @@
         );
 
         if ($result2) {
+            mysqli_free_result($result);
+            $result = findUserByUsernmameOrEmail($username, $email);
             $row = mysqli_fetch_array($result);
             $_SESSION['user_id'] = $row['USER_ID'];
             $_SESSION['username'] = $row['USER_USERNAME'];

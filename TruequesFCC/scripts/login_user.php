@@ -1,20 +1,11 @@
 <?php
-    require_once "./connection.php";
+    require_once "./read_users.php";
 
     session_start();
     $usernameOrEmail = $_REQUEST['usernameOrEmail'];
     $password = $_REQUEST['password'];
 
-    $link = connect();
-    $result = mysqli_query($link, "select 
-        USER_ID,
-        USER_USERNAME,
-        USER_NAME,
-        USER_EMAIL,
-        USER_DIRECTION,   
-        USER_PASSWORD,
-        USER_TYPE 
-        from USERS where USER_USERNAME = '$usernameOrEmail' OR USER_EMAIL = '$usernameOrEmail'");
+    $result = readUserByUsernmameOrEmail($usernameOrEmail);
     
     if ($row = mysqli_fetch_array($result)) {
         if ($row['USER_PASSWORD'] == $password) {
@@ -38,7 +29,5 @@
         header("Location: ../login");
     }
 
-    mysqli_free_result($result);
-    mysqli_close($link);
-    
+    mysqli_free_result($result);    
 ?>
