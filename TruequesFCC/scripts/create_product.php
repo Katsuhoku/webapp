@@ -9,7 +9,7 @@
     $product_state = $_REQUEST['product_state'];
     $product_main_img = $_FILES['product_main_img'];
 
-    print_r($_FILES);
+    /*print_r($_FILES);
     echo '<br>';
     print_r ($product_main_img);
     echo '<br>';
@@ -18,7 +18,7 @@
     echo $product_main_img['type'];
     echo '<br>';
     echo $product_main_img['tmp_name'];
-    echo '<br>';
+    echo '<br>';*/
 
     $link = connect();
     $result = mysqli_query($link, "INSERT INTO PRODUCTS 
