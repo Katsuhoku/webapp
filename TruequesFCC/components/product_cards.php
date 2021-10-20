@@ -46,7 +46,7 @@
         echo '
             <div class="col">
                 <div class="card h-100 shadow mb-5 bg-light" style="border-radius: 16px; --bs-bg-opacity: .8;">
-                    <div class="wrapper">
+                    <div class="wrapper bg-white" style="border-radius: 16px 16px 0px 0px;">
                         <img class="card-img-top" src="products-img/'.($img == null ? "image-holder.png" : $img ).'" alt="'.$name.'" style="border-radius: 16px 16px 0px 0px;">
                     </div>
                     <div class="card-body">
