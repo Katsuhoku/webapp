@@ -14,6 +14,7 @@
         WHERE PRODUCT_ID = '$product_id'"
     );
     if (array_key_exists('product_main_img', $_FILES) && !empty($_FILES['product_main_img']['name'])){
+        $product_main_img = $_FILES['product_main_img'];
         $image_name = $product_id."-1.".pathinfo($product_main_img['name'], PATHINFO_EXTENSION);
         $image_result = mysqli_query($link, "REPLACE INTO IMAGES
             (PRODUCT_ID, IMAGE_ROUTE, IMAGE_IS_MAIN) VALUES
