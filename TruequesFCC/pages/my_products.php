@@ -28,6 +28,7 @@
                             $item['PRODUCT_DESCRIPTION'],
                             $item['PRODUCT_DATE'],
                             $item['PRODUCT_STATE'],
+                            $item['CATEGORY_ID'],
                             $main_image['IMAGE_ROUTE']
                         );
                         mysqli_free_result($image_result);

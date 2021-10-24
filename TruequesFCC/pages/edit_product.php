@@ -32,6 +32,31 @@
             </div>
 
             <div class="mb-3">
+                <label for="product_category" class="form-label">Categoria del producto</label>
+                <select class="form-select" id="product_category" name="product_category" aria-label="Categoria del producto" required>
+                    <option disabled value="">Selecciona una categoria</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 1) echo 'selected'?> value="1">Ropa</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 2) echo 'selected'?> value="2">Zapatos</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 3) echo 'selected'?> value="3">Accesorios</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 4) echo 'selected'?> value="4">Belleza</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 5) echo 'selected'?> value="5">Relojes, Lentes, Joyeria</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 6) echo 'selected'?> value="6">Deportes</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 7) echo 'selected'?> value="7">Electrónica</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 8) echo 'selected'?> value="8">Celulares</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 9) echo 'selected'?> value="9">Videojuegos</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 10) echo 'selected'?> value="10">Juguetes</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 11) echo 'selected'?> value="11">Linea Blanca</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 12) echo 'selected'?> value="12">Muebles</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 13) echo 'selected'?> value="13">Cocina</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 14) echo 'selected'?> value="14">Vinos y Gourmet</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 15) echo 'selected'?> value="15">Viajes</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 16) echo 'selected'?> value="16">Mascotas</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 17) echo 'selected'?> value="17">Ferreteria</option>
+                    <option <?php if ($product['CATEGORY_ID'] == 18) echo 'selected'?> value="18">Otra categoria</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
                 <label for="mainImageFile" class="form-label">Imagen principal</label>
                 <input class="form-control" type="file" id="mainImageFile" name="product_main_img" accept="image/*">
             </div>
