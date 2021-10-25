@@ -16,6 +16,23 @@
         return $result;
     }
 
+    function readUserById($id) {
+        $link = connect();
+        $result = mysqli_query($link, "select 
+        USER_ID,
+        USER_USERNAME,
+        USER_NAME,
+        USER_EMAIL,
+        USER_DIRECTION,   
+        USER_PASSWORD,
+        USER_DATE,
+        USER_WISHLIST,
+        USER_TYPE 
+        from USERS where USER_ID = '$id'");
+        mysqli_close($link);
+        return $result;
+    }
+
     function readUserByUsernmameOrEmail($usernameOrEmail) {
         $link = connect();
         $result = mysqli_query($link, "select 
@@ -25,13 +42,15 @@
         USER_EMAIL,
         USER_DIRECTION,   
         USER_PASSWORD,
+        USER_DATE,
+        USER_WISHLIST,
         USER_TYPE 
         from USERS where USER_USERNAME = '$usernameOrEmail' OR USER_EMAIL = '$usernameOrEmail'");
         mysqli_close($link);
         return $result;
     }
 
-    function readUserByUsernmame($username) {
+    function readUserByUsername($username) {
         $link = connect();
         $result = mysqli_query($link, "select 
         USER_ID,
@@ -40,6 +59,8 @@
         USER_EMAIL,
         USER_DIRECTION,   
         USER_PASSWORD,
+        USER_DATE,
+        USER_WISHLIST,
         USER_TYPE 
         from USERS where USER_USERNAME = '$username'");
         mysqli_close($link);
@@ -55,9 +76,13 @@
         USER_EMAIL,
         USER_DIRECTION,   
         USER_PASSWORD,
+        USER_DATE,
+        USER_WISHLIST,
         USER_TYPE 
         from USERS where USER_EMAIL = '$email'");
         mysqli_close($link);
         return $result;
     }
+
+    
 ?>

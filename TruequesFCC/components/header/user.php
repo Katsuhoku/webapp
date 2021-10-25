@@ -18,7 +18,7 @@
         <li><a class="dropdown-item" href="#">Mis ofertas</a></li>
         <li><a class="dropdown-item" href="#">Ofertas</a></li>
         <li><a class="dropdown-item" href="my_deleted_products">Eliminados</a></li>
-        <li><a class="dropdown-item" href="#">Editar perfil</a></li>
+        <li><a class="dropdown-item" href="edit_profile">Editar perfil</a></li>
         </ul>
     </li>
     

@@ -10,10 +10,10 @@
     if ($row = mysqli_fetch_array($result)) {
         if ($row['USER_PASSWORD'] == $password) {
             $_SESSION['user_id'] = $row['USER_ID'];
-            $_SESSION['username'] = $row['USER_USERNAME'];
+            /*$_SESSION['username'] = $row['USER_USERNAME'];
             $_SESSION['name'] = $row['USER_NAME'];
             $_SESSION['email'] = $row['USER_EMAIL'];
-            $_SESSION['direction'] = $row['USER_DIRECTION'];
+            $_SESSION['direction'] = $row['USER_DIRECTION'];*/
             $_SESSION['type'] = $row['USER_TYPE'];
             header("Location: ../index");
 
