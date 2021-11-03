@@ -15,8 +15,8 @@
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         <li><a class="dropdown-item" href="my_products">Mis productos</a></li>
-        <li><a class="dropdown-item" href="#">Mis ofertas</a></li>
-        <li><a class="dropdown-item" href="#">Ofertas</a></li>
+        <li><a class="dropdown-item" href="my_offers">Mis ofertas</a></li>
+        <li><a class="dropdown-item" href="offers">Ofertas</a></li>
         <li><a class="dropdown-item" href="my_deleted_products">Eliminados</a></li>
         <li><a class="dropdown-item" href="edit_profile">Editar perfil</a></li>
         </ul>

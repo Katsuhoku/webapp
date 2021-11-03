@@ -8,11 +8,11 @@
     <div class="container">
         <div class="row">
             <div class="col col-md-6 py-5">
-                <h2 class="h1">Aqui encontrarás todos los productos que has <span class="text-primary">publicado</span>.</h2>
+                <h2 class="h1">Aqui encontrarás todas las ofertas que te han <span class="text-primary">ofrecido</span>.</h2>
             </div>
         </div>
         <div class="row">
-            <h3 class="h3">Publicaciones más recientes</h3>
+            <h3 class="h3">Ofertas más recientes</h3>
         </div> 
             <?php
                 $result = readAllOwnProducts($_SESSION['user_id']);
