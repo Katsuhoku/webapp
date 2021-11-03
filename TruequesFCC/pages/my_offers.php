@@ -1,4 +1,5 @@
 <?php
+    require_once "scripts/read_offers.php";
     require_once "scripts/read_products.php";
     require_once "scripts/read_product_images.php";
     require_once "components/product_cards.php";
@@ -12,14 +13,14 @@
             </div>
         </div>
         <div class="row">
-            <h3 class="h3">Ofertas realizadas más recientes</h3>
+            <h3 class="h3">Mis ofertas más recientes</h3>
         </div> 
             <?php
-                $result = readAllOwnProducts($_SESSION['user_id']);
+                $result = readAllMyOffers($_SESSION['user_id']);
                 if ($data = mysqli_fetch_all($result, MYSQLI_ASSOC)) {
                     echo '<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 my-3">';
                     foreach ($data as $item) {
-                        $image_result = readMainImageByProduct($item['PRODUCT_ID']);
+                        /*$image_result = readMainImageByProduct($item['PRODUCT_ID']);
                         $main_image = mysqli_fetch_array($image_result);
 
                         create_own_product_card(
@@ -31,10 +32,10 @@
                             $item['CATEGORY_ID'],
                             $main_image['IMAGE_ROUTE']
                         );
-                        mysqli_free_result($image_result);
+                        mysqli_free_result($image_result);*/
                     }
                 } else
-                    require_once "components/no_products.html";
+                    require_once "components/no_offers.html";
                 mysqli_free_result($result);
             ?>
         </div>

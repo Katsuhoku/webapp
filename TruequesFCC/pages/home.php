@@ -33,7 +33,8 @@
                         );
                         mysqli_free_result($image_result);
                     }
-                }
+                } else
+                    require_once "components/no_products.html";
                 mysqli_free_result($result);
             ?>
         </div>

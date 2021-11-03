@@ -20,7 +20,7 @@
             PRODUCT_ID,
             IMAGE_ROUTE,
             IMAGE_IS_MAIN
-            from IMAGES where PRODUCT_ID = '$product_id' AND IMAGE_IS_MAIN = TRUE");
+            from IMAGES where PRODUCT_ID = '$product_id' AND IMAGE_IS_MAIN = FALSE");
         mysqli_close($link);
         return $result;
     }

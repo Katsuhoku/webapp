@@ -11,7 +11,7 @@
         upper_card($name, $description, $date, $state, $category, $img);
         echo '
                     <div class="card-footer text-end">
-                        <a href="#" class="btn btn-outline-primary">Ver detalles</a>
+                        <a href="product_details?product_id='.$id.'" class="btn btn-outline-primary">Ver detalles</a>
                         <a href="#" class="btn btn-primary">Ofertar</a>
                     </div>
                 </div>   
@@ -79,6 +79,29 @@
                         <p class="card-text">Categoria: '.getCategoryName($category).'</p>
                         <p class="card-text">'.$description.'</p>
                     </div>
+        ';
+    }
+
+    function create_product_details_card(
+        String $name,
+        String $description, 
+        $date,
+        int $state,
+        int $category
+    ){
+        echo '
+            <div class="col">
+                <p class="h2 text-center">Datos del <span class="text-primary">producto</span></p>
+                <div class="card h-100 shadow mb-5 bg-light" style="border-radius: 16px; --bs-bg-opacity: .75;">
+                    <div class="card-body">
+                        <h5 class="card-title">'.$name.'</h5>
+                        <p class="card-text"><small class="text-muted">Fecha de publicación: '.(new DateTime($date))->format('d-M-Y').'</small></p>
+                        <p class="card-text">Estado: '.($state == 1 ? "Usado" : "Nuevo").'</p>
+                        <p class="card-text">Categoria: '.getCategoryName($category).'</p>
+                        <p class="card-text">'.$description.'</p>
+                    </div>
+                </div>
+            </div>
         ';
     }
 
