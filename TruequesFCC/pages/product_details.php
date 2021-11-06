@@ -82,8 +82,15 @@
             );
             ?>
         </div>
-        <div class="row my-5 text-center">
-            <a href="#" class="col mx-3 btn btn-primary">Ofertar</a>
-        </div>
+        <?php
+            if (!array_key_exists('user_id', $_SESSION) || $_SESSION['user_id'] != $user['USER_ID']) {
+                echo '
+                <div class="row my-5 text-center">
+                    <a href="select_product?product_id='.$product_id.'" class="col mx-3 btn btn-primary">Ofertar</a>
+                 </div>
+                ';
+            }
+        ?>
+        
     </div>
 </main>

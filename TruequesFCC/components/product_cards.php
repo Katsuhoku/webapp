@@ -12,7 +12,7 @@
         echo '
                     <div class="card-footer text-end">
                         <a href="product_details?product_id='.$id.'" class="btn btn-outline-primary">Ver detalles</a>
-                        <a href="#" class="btn btn-primary">Ofertar</a>
+                        <a href="select_product?product_id='.$id.'" class="btn btn-primary">Ofertar</a>
                     </div>
                 </div>   
             </div>
@@ -33,6 +33,26 @@
                     <div class="card-footer text-end">
                         <a onclick="return confirmDeletion()" href="./scripts/delete_temp_product?product_id='.$id.'" class="btn btn-danger">Eliminar</a>
                         <a href="edit_product?product_id='.$id.'" class="btn btn-outline-primary">Editar</a>
+                    </div>
+                </div>   
+            </div>
+        ';
+    }
+
+    function create_select_product_card(
+        int $id,
+        int $selected_product_id, 
+        String $name,
+        String $description, 
+        String $date,
+        String $state,
+        int $category,
+        $img
+    ) {
+        upper_card($name, $description, $date, $state, $category, $img);
+        echo '
+                    <div class="card-footer text-end">
+                        <a href="./scripts/create_offer?product_id='.$id.'&selected_product_id='.$selected_product_id.'" class="btn btn-outline-primary">Seleccionar</a>
                     </div>
                 </div>   
             </div>
