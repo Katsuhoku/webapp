@@ -3,6 +3,7 @@
     
     function create_my_offer_card(
         int $offer_id,
+        int $offer_state,
         int $id_1 = null, 
         String $name_1,
         String $description_1, 
@@ -34,10 +35,19 @@
 
         echo '
                     </div>
-                    <div class="card-footer d-flex justify-content-between">
-                        <span class="h6 text-success">Abierta</span>
-                        <a class="btn btn-danger text-center" onclick="return confirmOfferDeletion()" href="./scripts/delete_offer?offer_id='.$offer_id.'">Eliminar</a>
-                    </div>
+        ';
+
+        switch ($offer_state) {
+            case 1: deleteable_card_footer($offer_id);
+                break;
+            case 3: finalizable_card_footer($offer_id);
+                break;
+            case 4: declined_card_footer($offer_id);
+                break;
+            default: finalized_card_footer($offer_id);
+                break;
+        }
+        echo '
                 </div>
             </div>        
         ';
@@ -45,6 +55,7 @@
 
     function create_offer_card(
         int $offer_id,
+        int $offer_state,
         int $id_1 = null, 
         String $name_1,
         String $description_1, 
@@ -76,13 +87,18 @@
 
         echo '
                     </div>
-                    <div class="card-footer d-flex justify-content-between">
-                        <span class="h6 text-success">Abierta</span>
-                        <div>
-                            <a onclick="return confirmDeletion()" href="./scripts/delete_temp_product?product_id='.$id_1.'" class="btn btn-danger">Rechazar</a>
-                            <a href="edit_product?product_id='.$id_1.'" class="btn btn-outline-primary">Aceptar</a>
-                        </div>
-                    </div>
+        ';
+        switch ($offer_state) {
+            case 1: declinable_acceptable_card_footer($offer_id);
+                break;
+            case 3: cancellable_card_footer($offer_id);
+                break;
+            case 4: declined_card_footer($offer_id);
+                break;
+            default: finalized_card_footer($offer_id);
+                break;
+        }
+        echo '
                 </div>
             </div>        
         ';
@@ -143,7 +159,6 @@
                     <p class="card-text">Categoria: '.getCategoryName($category).'</p>
                     <p class="card-text">'.$description.'</p>
                     <div class="text-end">
-                        
                         <a href="product_details?product_id='.$id.'" class="btn btn-outline-primary">Ver detalles</a>
                     </div>
                 </div>
@@ -184,5 +199,79 @@
             </div>
         ';
     }
-?>
 
+    function deleteable_card_footer($offer_id) {
+        echo '
+            <div class="card-footer d-flex justify-content-between">
+                <span class="h6 text-success">Abierta</span>
+                <a class="btn btn-danger text-center" onclick="return confirmOfferDeletion()" href="./scripts/delete_offer?offer_id='.$offer_id.'">Eliminar</a>
+            </div>
+        ';
+    }
+
+    function declinable_acceptable_card_footer($offer_id) {
+        echo '
+            <div class="card-footer d-flex justify-content-between">
+                <span class="h6 text-success">Abierta</span>
+                <div>
+                    <a href="./scripts/update_offer?offer_id='.$offer_id.'&offer_state=decline" class="btn btn-danger">Rechazar</a>
+                    <a href="./scripts/update_offer?offer_id='.$offer_id.'&offer_state=accept" class="btn btn-outline-primary">Aceptar</a>
+                </div>
+            </div>
+        ';
+    }
+
+    function declined_card_footer($offer_id) {
+        echo '
+            <div class="card-footer d-flex justify-content-between">
+                <span class="h6 text-danger">Rechazada</span>
+                <div>
+                <a class="btn btn-danger text-center" onclick="return confirmOfferDeletion()" href="./scripts/delete_offer?offer_id='.$offer_id.'">Eliminar</a>
+                </div>
+            </div>
+        ';
+    }
+
+    function cancellable_card_footer($offer_id) {
+        echo '
+            <div class="card-footer d-flex justify-content-between">
+                <span class="h6 text-success">En progeso</span>
+                <div>
+                    <a class="btn btn-danger text-center" onclick="return confirmOfferCancel()" href="./scripts/update_offer?offer_id='.$offer_id.'&offer_state=open">Cancelar</a>
+                </div>
+            </div>
+        ';
+    }
+
+    function accepted_card_footer($offer_id) {
+        echo '
+            <div class="card-footer d-flex justify-content-between">
+                <span class="h6 text-success">En progeso</span>
+                <a class="btn btn-danger text-center" onclick="return confirmOfferDeletion()" href="./scripts/delete_offer?offer_id='.$offer_id.'">Eliminar</a>
+            </div>
+        ';
+    }
+
+    function finalized_card_footer($offer_id) {
+        echo '
+            <div class="card-footer d-flex justify-content-between">
+                <span class="h6 text-primary">Finalizada</span>
+                <div>
+                    <a class="btn btn-danger text-center" onclick="return confirmOfferDeletion()" href="./scripts/delete_offer?offer_id='.$offer_id.'">Eliminar</a>
+                </div>
+            </div>
+        ';
+    }
+
+    function finalizable_card_footer($offer_id) {
+        echo '
+            <div class="card-footer d-flex justify-content-between">
+                <span class="h6 text-success">En progeso</span>
+                <div >
+                    <a class="btn btn-danger text-center" onclick="return confirmOfferDeletion()" href="./scripts/delete_offer?offer_id='.$offer_id.'">Eliminar</a>
+                    <a href="./scripts/update_offer?offer_id='.$offer_id.'&offer_state=completed" class="btn btn-outline-primary">Aceptar</a>
+                </div>
+            </div>
+        ';
+    }
+?>

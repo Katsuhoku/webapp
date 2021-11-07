@@ -6,6 +6,10 @@ function confirmOfferDeletion() {
     return confirm("¿Estás seguro de querer eliminar esta oferta?")
 }
 
+function confirmOfferCancel() {
+    return confirm("¿Estás seguro de querer cancelar esta oferta?")
+}
+
 function confirmUpdate() {
     return confirm("¿Estás seguro de querer actualizar este producto?")
 }

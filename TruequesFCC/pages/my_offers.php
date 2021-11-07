@@ -31,6 +31,7 @@
 
                         create_my_offer_card(
                             $item['OFFER_ID'],
+                            $item['STATE_ID'],
                             $product['PRODUCT_ID'],
                             $product['PRODUCT_NAME'],
                             $product['PRODUCT_DESCRIPTION'],
