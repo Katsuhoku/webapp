@@ -28,7 +28,7 @@
             PRODUCT_DESCRIPTION,
             PRODUCT_STATE,   
             PRODUCT_DATE
-            FROM PRODUCTS where USER_ID != '$user_id' AND IS_DELETED = 0
+            FROM PRODUCTS where USER_ID != '$user_id' AND IS_DELETED = 0 AND IS_CHANGED = 0
             ORDER BY PRODUCT_DATE DESC");
         mysqli_close($link);
         return $result;
@@ -45,7 +45,7 @@
             PRODUCT_DESCRIPTION,
             PRODUCT_STATE,   
             PRODUCT_DATE
-            FROM PRODUCTS where USER_ID = '$user_id' AND IS_DELETED = 0
+            FROM PRODUCTS where USER_ID = '$user_id' AND IS_DELETED = 0 AND IS_CHANGED = 0
             ORDER BY PRODUCT_DATE DESC");
         mysqli_close($link);
         return $result;
@@ -62,7 +62,7 @@
             PRODUCT_DESCRIPTION,
             PRODUCT_STATE,   
             PRODUCT_DATE
-            FROM PRODUCTS where USER_ID = '$user_id' AND IS_DELETED = 1
+            FROM PRODUCTS where USER_ID = '$user_id' AND IS_DELETED = 1 AND IS_CHANGED = 0
             ORDER BY PRODUCT_DATE DESC");
         mysqli_close($link);
         return $result;
@@ -78,7 +78,7 @@
             PRODUCT_DESCRIPTION,
             PRODUCT_STATE,   
             PRODUCT_DATE
-            FROM PRODUCTS where USER_ID = '$user_id' AND IS_DELETED = 0
+            FROM PRODUCTS where USER_ID = '$user_id' AND IS_DELETED = 0 AND IS_CHANGED = 0
             ORDER BY PRODUCT_DATE DESC
             LIMIT 1");
         mysqli_close($link);
@@ -110,7 +110,7 @@
             PRODUCT_DESCRIPTION,
             PRODUCT_STATE,   
             PRODUCT_DATE
-            from PRODUCTS where CATEGORY_ID = '$category'");
+            from PRODUCTS where CATEGORY_ID = '$category' AND IS_CHANGED = 0");
         mysqli_close($link);
         return $result;
     }
