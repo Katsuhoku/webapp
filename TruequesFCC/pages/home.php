@@ -22,15 +22,38 @@
                     foreach ($data as $item) {
                         $image_result = readMainImageByProduct($item['PRODUCT_ID']);
                         $main_image = mysqli_fetch_array($image_result);
-                        create_product_card(
-                            $item['PRODUCT_ID'],
-                            $item['PRODUCT_NAME'],
-                            $item['PRODUCT_DESCRIPTION'],
-                            $item['PRODUCT_DATE'],
-                            $item['PRODUCT_STATE'],
-                            $item['CATEGORY_ID'],
-                            $main_image['IMAGE_ROUTE']
-                        );
+                        if ($_SESSION == null || !array_key_exists('type', $_SESSION)) {
+                            create_internet_user_product_card(
+                                $item['PRODUCT_ID'],
+                                $item['PRODUCT_NAME'],
+                                $item['PRODUCT_DESCRIPTION'],
+                                $item['PRODUCT_DATE'],
+                                $item['PRODUCT_STATE'],
+                                $item['CATEGORY_ID'],
+                                $main_image['IMAGE_ROUTE']
+                            );
+                          } else {
+                              if ($_SESSION['type'] == 1)
+                                create_admin_product_card(
+                                    $item['PRODUCT_ID'],
+                                    $item['PRODUCT_NAME'],
+                                    $item['PRODUCT_DESCRIPTION'],
+                                    $item['PRODUCT_DATE'],
+                                    $item['PRODUCT_STATE'],
+                                    $item['CATEGORY_ID'],
+                                    $main_image['IMAGE_ROUTE']
+                                );
+                              else
+                                create_product_card(
+                                    $item['PRODUCT_ID'],
+                                    $item['PRODUCT_NAME'],
+                                    $item['PRODUCT_DESCRIPTION'],
+                                    $item['PRODUCT_DATE'],
+                                    $item['PRODUCT_STATE'],
+                                    $item['CATEGORY_ID'],
+                                    $main_image['IMAGE_ROUTE']
+                                );  
+                          }
                         mysqli_free_result($image_result);
                     }
                 } else

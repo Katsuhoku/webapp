@@ -59,6 +59,46 @@
         ';
     }
 
+    function create_internet_user_product_card(
+        int $id = null, 
+        String $name,
+        String $description, 
+        $date,
+        int $state,
+        int $category,
+        $img
+    ) {
+        upper_card($name, $description, $date, $state, $category, $img);
+        echo '
+                    <div class="card-footer text-end">
+                        <a href="product_details?product_id='.$id.'" class="btn btn-outline-primary">Ver detalles</a>
+                        <a href="register" class="btn btn-primary">Ofertar</a>
+                    </div>
+                </div>   
+            </div>
+        ';
+    }
+
+    function create_admin_product_card(
+        int $id, 
+        String $name,
+        String $description, 
+        String $date,
+        String $state,
+        int $category,
+        $img
+    ) {
+        upper_card($name, $description, $date, $state, $category, $img);
+        echo '
+                    <div class="card-footer text-end">
+                        <a onclick="return confirmDeletion()"  href="./scripts/delete_product?product_id='.$id.'" class="btn btn-danger">Eliminar</a>
+                    </div>
+                </div>   
+            </div>
+        ';
+    }
+
+
     function create_restore_product_card(
         int $id, 
         String $name,

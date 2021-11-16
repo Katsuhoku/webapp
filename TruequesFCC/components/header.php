@@ -34,8 +34,10 @@
                   if ($_SESSION == null || !array_key_exists('type', $_SESSION)) {
                     require_once("./components/header/internet_user.php");
                   } else {
-                      //if ($_SESSION['type'] == 0)
-                        require_once("./components/header/user.php");
+                      if ($_SESSION['type'] == 1)
+                        require_once("./components/header/admi.php");
+                      else
+                        require_once("./components/header/user.php");   
                   }
                   ?>
                 </div>
