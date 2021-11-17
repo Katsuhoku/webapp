@@ -1,7 +1,7 @@
 <?php
     session_start();
     if ($_SESSION == null || !array_key_exists('type', $_SESSION)) {
-        header("Location: index");
+        header("Location: register");
     } else {
         require_once "components/header.php";
     
