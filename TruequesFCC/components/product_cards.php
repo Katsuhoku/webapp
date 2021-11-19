@@ -30,6 +30,7 @@
     ) {
         upper_card($name, $description, $date, $state, $category, $img);
         echo '
+                    <a href="product_details?product_id='.$id.'" class="btn btn-outline-primary mx-5">Detalles</a>
                     <div class="card-footer text-end">
                         <a onclick="return confirmDeletion()" href="./scripts/delete_temp_product?product_id='.$id.'" class="btn btn-danger">Eliminar</a>
                         <a href="edit_product?product_id='.$id.'" class="btn btn-outline-primary">Editar</a>
@@ -91,6 +92,7 @@
         upper_card($name, $description, $date, $state, $category, $img);
         echo '
                     <div class="card-footer text-end">
+                        <a href="edit_product?product_id='.$id.'" class="btn btn-outline-primary">Editar</a>
                         <a onclick="return confirmDeletion()"  href="./scripts/delete_product?product_id='.$id.'" class="btn btn-danger">Eliminar</a>
                     </div>
                 </div>   
