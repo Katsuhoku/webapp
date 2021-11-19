@@ -100,7 +100,7 @@
         return $result;
     }
 
-    function readProductsByCategory($category) {
+    function readAllProductsByCategory($category) {
         $link = connect();
         $result = mysqli_query($link, "select
             PRODUCT_ID,
@@ -110,7 +110,23 @@
             PRODUCT_DESCRIPTION,
             PRODUCT_STATE,   
             PRODUCT_DATE
-            from PRODUCTS where CATEGORY_ID = '$category' AND IS_CHANGED = 0");
+            from PRODUCTS where CATEGORY_ID = '$category'");
+        mysqli_close($link);
+        return $result;
+    }
+
+    function readAllFilteredProductsByCategory($user_id, $category) {
+        $link = connect();
+        $result = mysqli_query($link, "select
+            PRODUCT_ID,
+            USER_ID,
+            CATEGORY_ID, 
+            PRODUCT_NAME,
+            PRODUCT_DESCRIPTION,
+            PRODUCT_STATE,   
+            PRODUCT_DATE
+            FROM PRODUCTS where CATEGORY_ID = '$category' AND USER_ID != '$user_id' AND IS_DELETED = 0 AND IS_CHANGED = 0
+            ORDER BY PRODUCT_DATE DESC");
         mysqli_close($link);
         return $result;
     }
