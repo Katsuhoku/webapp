@@ -9,7 +9,9 @@
             CATEGORY_ID, 
             PRODUCT_NAME,
             PRODUCT_DESCRIPTION,
-            PRODUCT_STATE,   
+            PRODUCT_STATE,
+            IS_DELETED,
+            IS_CHANGED,   
             PRODUCT_DATE
             FROM PRODUCTS where IS_DELETED = 0
             ORDER BY PRODUCT_DATE DESC");
@@ -26,7 +28,9 @@
             CATEGORY_ID, 
             PRODUCT_NAME,
             PRODUCT_DESCRIPTION,
-            PRODUCT_STATE,   
+            PRODUCT_STATE,
+            IS_DELETED,
+            IS_CHANGED,   
             PRODUCT_DATE
             FROM PRODUCTS where USER_ID != '$user_id' AND IS_DELETED = 0 AND IS_CHANGED = 0
             ORDER BY PRODUCT_DATE DESC");
@@ -43,7 +47,9 @@
             CATEGORY_ID, 
             PRODUCT_NAME,
             PRODUCT_DESCRIPTION,
-            PRODUCT_STATE,   
+            PRODUCT_STATE,
+            IS_DELETED,
+            IS_CHANGED,   
             PRODUCT_DATE
             FROM PRODUCTS where USER_ID = '$user_id' AND IS_DELETED = 0 AND IS_CHANGED = 0
             ORDER BY PRODUCT_DATE DESC");
@@ -60,7 +66,9 @@
             CATEGORY_ID, 
             PRODUCT_NAME,
             PRODUCT_DESCRIPTION,
-            PRODUCT_STATE,   
+            PRODUCT_STATE,
+            IS_DELETED,
+            IS_CHANGED,   
             PRODUCT_DATE
             FROM PRODUCTS where USER_ID = '$user_id' AND IS_DELETED = 1 AND IS_CHANGED = 0
             ORDER BY PRODUCT_DATE DESC");
@@ -76,7 +84,9 @@
             CATEGORY_ID, 
             PRODUCT_NAME,
             PRODUCT_DESCRIPTION,
-            PRODUCT_STATE,   
+            PRODUCT_STATE,
+            IS_DELETED,
+            IS_CHANGED,   
             PRODUCT_DATE
             FROM PRODUCTS where USER_ID = '$user_id' AND IS_DELETED = 0 AND IS_CHANGED = 0
             ORDER BY PRODUCT_DATE DESC
@@ -93,7 +103,9 @@
             CATEGORY_ID, 
             PRODUCT_NAME,
             PRODUCT_DESCRIPTION,
-            PRODUCT_STATE,   
+            PRODUCT_STATE,
+            IS_DELETED,
+            IS_CHANGED,
             PRODUCT_DATE
             from PRODUCTS where PRODUCT_ID = '$id'");
         mysqli_close($link);
@@ -108,7 +120,9 @@
             CATEGORY_ID, 
             PRODUCT_NAME,
             PRODUCT_DESCRIPTION,
-            PRODUCT_STATE,   
+            PRODUCT_STATE,
+            IS_DELETED,
+            IS_CHANGED,   
             PRODUCT_DATE
             from PRODUCTS where CATEGORY_ID = '$category'");
         mysqli_close($link);
@@ -123,7 +137,9 @@
             CATEGORY_ID, 
             PRODUCT_NAME,
             PRODUCT_DESCRIPTION,
-            PRODUCT_STATE,   
+            PRODUCT_STATE,
+            IS_DELETED,
+            IS_CHANGED,   
             PRODUCT_DATE
             FROM PRODUCTS where CATEGORY_ID = '$category' AND USER_ID != '$user_id' AND IS_DELETED = 0 AND IS_CHANGED = 0
             ORDER BY PRODUCT_DATE DESC");

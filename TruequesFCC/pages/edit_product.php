@@ -3,9 +3,15 @@
     $result = readProductById($_GET['product_id']);
     $product = mysqli_fetch_array($result);
     mysqli_free_result($result);
+    
+    if ($_SESSION['type'] == 0  && $_SESSION['user_id'] != $product['USER_ID'] 
+        || $product['IS_CHANGED'] == 1 
+        || $product['IS_DELETED'] == 1
+    ) header("Location: index");
 ?>
 
 <main>
+    <?php echo $product['IS_CHANGED']; ?>
     <div class="container">
         <div class="row">
             <div class="col-6 py-5">
