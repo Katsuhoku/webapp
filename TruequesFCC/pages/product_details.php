@@ -31,14 +31,14 @@
             ?>
             
             <div id="productCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
+                <!--<div class="carousel-indicators">
                     <?php
                         $photo = 0;
                         foreach ($images as $img) {
                             echo '<button type="button" data-bs-target="#productCarousel" data-bs-slide-to="'.$photo.'" aria-label="Photo "'.++$photo.'></button>';
                         }
                     ?>
-                </div>
+                </div> -->
                 <div class="carousel-inner">
                     <?php
                         $first = true;
@@ -47,7 +47,7 @@
                             if ($first){
                                 echo '<div class="carousel-item active">';
                                 $first = false;
-                            } else echo '<div class="carousel-item active">';
+                            } else echo '<div class="carousel-item">';
                             echo '<img src="./products-img/'.$name.'" class="d-block m-auto" alt="Imagen adicional" style="height: 60vh;">';
                             echo '</div>';
                         }

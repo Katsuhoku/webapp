@@ -23,6 +23,23 @@
         mysqli_free_result($image_result);
         copy($product_main_img['tmp_name'], "../products-img/".$image_name);
     }
+
+    if ($product_opc_imgs != null && $product_opc_imgs['size'][0] > 0) {
+        $product_opc_imgs = $_FILES['product_opc_imgs'];
+        
+        for ($i = 0 ; $i < sizeof($product_opc_imgs['name']) ; $i++) {
+            $index = $i + 2;
+            $ext_opc = pathinfo($product_opc_imgs['name'][$i], PATHINFO_EXTENSION);
+            $image_name = "$product_id-$index.$ext_opc";
+            
+            $image_opc_result = mysqli_query($link, "REPLACE INTO IMAGES
+                (PRODUCT_ID, IMAGE_ROUTE, IMAGE_IS_MAIN) VALUES
+                ('$product_id', '$image_name', 0)"
+            );
+            copy($product_opc_imgs['tmp_name'][$i], "../products-img/".$row_opc_img['IMAGE_ROUTE']);
+            mysqli_free_result($result_opc_img);
+        }
+    }
     
     header("Location: ../my_products");
     //mysqli_free_result($result); 

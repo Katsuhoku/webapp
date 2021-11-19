@@ -60,7 +60,7 @@
 
             <div class="mb-3">
                 <label for="optImageFiles" class="form-label">Imagenes adicionales</label>
-                <input class="form-control" type="file" id="optImageFiles"  name="product_opc_imgs" accept="image/*" multiple>
+                <input class="form-control" type="file" id="optImageFiles"  name="product_opc_imgs[]" accept="image/*" multiple>
             </div>
 
             <div class="mb-3 text-end">
